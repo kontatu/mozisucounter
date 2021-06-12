@@ -7,18 +7,17 @@
 const sampleForm = document.getElementById("sampleForm");
 const textCounter = document.getElementById("textCounter");
 const resetBtn = document.getElementById("resetBtn");
+const goalNum = 400;
 
-let textLength = 0;
-textCounter.textContent = `あと400`;
+textCounter.textContent = `あと${goalNum}`;
 
 sampleForm.addEventListener("keyup", () => {
     textLength = sampleForm.value.length;
-    textCounter.textContent = `あと${400 - textLength}`;
+    textCounter.textContent = `あと${goalNum - textLength}`;
 });
 
 resetBtn.addEventListener("click", () => {
-    textLength = 0;
-    textCounter.textContent = `あと400`;
+    textCounter.textContent = `あと${goalNum}`;
 });
 
 
